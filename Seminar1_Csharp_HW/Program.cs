@@ -83,3 +83,85 @@ while (current <= num)
     current = current + 2;
 }
 переименовала папку 04.12.2022*/
+
+// Вариант решения задач первого ДЗ через МЕТОД.
+// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+/*
+int Find(int a, int b)
+{
+    int max;
+    if (a > b)
+        max = a;
+    else
+        max = b;
+    return max;
+}
+Console.WriteLine("Input a first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+int Max = Find(num1, num2);
+Console.WriteLine("Большее число: " + Max);
+
+
+// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+
+int FindMax(int a, int b, int c)
+{
+    int max;
+    if (b > a)
+        if (c > b)
+            max = c;
+        else
+            max = b;
+    else
+        if (c > a)
+            max = c;
+        else
+            max = a;
+    return max;
+}
+Console.WriteLine("Input a first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input a third number: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+int Max = FindMax(num1, num2, num3);
+Console.WriteLine("Мксимальное число: " + Max);
+
+
+
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+bool Even(int a)
+{
+    if (a % 2 == 0)
+        return true;
+    else
+        return false;
+}
+Console.WriteLine("Input a number = ");
+int num = Convert.ToInt32(Console.ReadLine());
+bool result = Even(num);
+Console.WriteLine(result);
+
+*/
+
+// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+int Even(int a)
+{
+    int current = 0;
+    while (current <= a)
+    {
+        if (a % 2 == 0)
+            return current;
+        current++;
+    }
+    return current;
+}
+Console.Write("Input an integer number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int result = Even(num);
+Console.WriteLine(result);
