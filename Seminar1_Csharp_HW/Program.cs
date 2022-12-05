@@ -152,11 +152,11 @@ Console.WriteLine(result);
 
 int Even(int a)
 {
-    int current = 0;
+    int current = 2;
     while (current <= a)
     {
         if (a % 2 == 0)
-            return current;
+            return current; //какой-то из return current (159 или 162 строка) линий. но убрать ни отсюжа, ни оттуда нельяз.
         current++;
     }
     return current;
@@ -164,4 +164,5 @@ int Even(int a)
 Console.Write("Input an integer number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int result = Even(num);
-Console.WriteLine(result);
+Console.Write(result + "; ");
+
