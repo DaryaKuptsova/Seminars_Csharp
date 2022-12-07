@@ -150,19 +150,20 @@ Console.WriteLine(result);
 
 // Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
-int Even(int a)
+void Even(int a)
 {
     int current = 2;
     while (current <= a)
     {
-        if (a % 2 == 0)
-            return current; //какой-то из return current (159 или 162 строка) линий. но убрать ни отсюжа, ни оттуда нельяз.
-        current++;
+        Console.Write(current);
+        if (current == a) Console.Write(".");
+        else
+            Console.Write(", ");
+        current = current + 2;
     }
-    return current;
 }
 Console.Write("Input an integer number: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int result = Even(num);
-Console.Write(result + "; ");
+Even(num);
 
+//тут нужно использовать void (и writeline)
